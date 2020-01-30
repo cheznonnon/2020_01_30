@@ -1,0 +1,174 @@
+
+
+----------==========----------==========----------==========----------
+
+
+"Eat Your Own Catfood."
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2020/01/30
+
+
+BUGFIX
+
+
+	win32/win_txtbox/07_metrics.c
+		initial line size
+			OLD : misbehave in Watchcat
+			NEW : fixed
+			[x] : BUGFIX @ 2020/01/10
+		typo : module name
+			NEW : fixed
+
+	Watchcat
+		Process List
+			OLD : conflict with Info View
+			NEW : fixed
+			[x] : ???
+
+
+NEW_FEATURE
+
+
+	win32/win/_debug.c
+		n_win_is_lefthanded()
+			NEW : left handedness checker
+
+	CatPad
+		Font Chooser : font preview
+			OLD : control color
+			NEW :  window color
+	Marie
+		when left handed mode
+			NEW : vertical scrollbar position will be changed
+	Nonnon Paint
+		when left handed mode
+			NEW : vertical scrollbar position will be changed
+	OrangeCat
+		when left handed mode
+			NEW : vertical scrollbar position will be changed
+	Pen Trainer
+		Config : font preview
+			OLD : control color
+			NEW :  window color
+		when left handed mode
+			NEW : config button position will be changed
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2020/01/20
+
+
+BUGFIX
+
+
+	project/neko.multi.ico
+		48px
+			OLD : inaccurate pixels
+			NEW : fixed
+
+	Nonnon Apps
+		Calendar : 64-bit version
+			OLD : width is insufficient
+			NEW : fixed
+	OrangeCat
+		when not active at startup
+			OLD : transition stops until activated
+			NEW : fixed
+			[x] : BUGFIX @ 2020/01/10
+		Drag2Select : minimum size
+			OLD : zero       : a frame will disappear
+			NEW : scale * 2
+
+
+NEW_FEATURE
+
+
+	project/macro.c
+		Tool Band : dark mode is on
+			OLD : default window color
+			NEW : black
+
+	win32/win_txtbox.c
+		N_WIN_TXTBOX_OPTION_ONELINE_FADEOUT : when cut
+			NEW : no fading
+
+	Nonnon Paint
+		Preview and Thumbnail : cursors and icons
+			NEW : re-tuned
+			[!] : darkmode available
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2020/01/10
+
+
+BUGFIX
+
+
+	all
+		using game layer : using subclass
+			OLD : not released accurately
+			NEW : fixed
+
+	game/game.c
+		.active
+			OLD : conflict with Direct2D
+			NEW : this feature is removed
+			[!] : usage is changed
+			[!] : use n_game.on_event and timer for an inactive window
+
+	win32/win/set.c
+		VC++ : n_win_minsize_proc() : patched code : "patch_sy"
+			OLD : conflict with a closed window
+			NEW : fixed
+			[!] : title bar will gray at closed
+	win32/win_txtbox/07_metrics.c
+		initial line size
+			OLD : misbehave
+			NEW : fixed
+
+	All
+		using Direct2D Bridge DLL
+			OLD : inactive state when a window is closed
+			NEW : fixed
+			[!] : feature in game.c causes
+
+
+NEW_FEATURE
+
+
+	game.game.c
+		n_game.on_close
+			NEW : callback at WM_CLOSE
+		n_game.on_event
+			NEW : easy to use subclass
+
+	CatPad
+		source code : use of subclass
+			NEW : reduced
+			[!] : for simpler code
+	Felis
+		source code : use of subclass
+			NEW : reduced
+			[!] : for simpler code
+
+
+----------==========----------==========----------==========----------
+
